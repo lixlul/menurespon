@@ -1,0 +1,410 @@
+/* Estilo do menu principal */
+nav {
+    background-color: #050a30;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li {
+    position: relative;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    font-family: sans-serif;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: rgb(32, 185, 190);
+}
+
+.btn-login {
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    color: white;
+    font-size: 18px;
+    border-radius: 20px;
+}
+
+/* Estilo do dropdown */
+nav ul li .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #050a30;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    min-width: 160px;
+    padding: 0;
+}
+
+nav ul li .dropdown-content li a {
+    padding: 10px 15px;
+}
+
+nav ul li:hover .dropdown-content {
+    display: block;
+}
+
+/* Menu hamburguer para telas menores */
+.menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        background-color: #1b2050;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .menu-toggle:checked + .menu-icon + ul {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
+
+/* Responsividade para telas muito pequenas */
+@media (max-width: 480px) {
+    nav ul li a {
+        font-size: 18px;
+    }
+
+    .btn-login {
+        font-size: 16px;
+    }
+}
+.slider{
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    position:relative;
+    
+    }
+    .slides{
+        display: flex;
+        width: 100%;
+        animation: slideAnimation 12s infinite;
+    }
+    .slide{
+        width: 100%;
+        flex-shrink: 0;
+    }
+    @keyframes slideAnimation {
+        0%{transform: translateX(0);}
+        33%{transform: translateX(-100%);}
+        66%{transform: translateX(-200%);}
+        100%{transform: translateX(0);}
+    }
+    .slide img{
+        width: 100%;
+        display: block;
+    }
+    body {
+        font-family:  sans-serif;
+    }
+    .texto{
+        color: black;
+        font-family:  sans-serif;
+        text-decoration: none;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        scale: 200px;
+    }
+    
+    /* Estilo para o contêiner principal */
+    .container {
+        display: flex; /* Define o contêiner como um flexbox */
+        gap: 60px; /* Espaçamento entre os cards */
+        flex-wrap: wrap; 
+        margin: center;
+        padding: 6%;/* Permite que os cards quebrem linha se necessário */
+    }
+    
+    .product-cards {
+        display: flex;
+        justify-content: space-around;
+        padding: 50px;
+    }
+    
+    
+    .card {
+        width: 300px;
+        background-color: #050a30;
+        padding: 20px;
+        text-align: center;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animação suave para flutuação */
+    }
+    .card:hover {
+        transform: translateY(-10px); /* Eleva o card para dar o efeito de flutuação */
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2); /* Aumenta a sombra para dar a impressão de profundidade */
+    }
+    
+    
+    .card img {
+        width: 100%;
+        border-radius: 10px;
+    }
+    
+    
+    .card h3 {
+        margin: 20px 0;
+        color: #d1d1d1;
+    }
+    .card .btn {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #8c93d3;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+    
+    
+    .card .btn:hover {
+        background-color: #333;
+    }
+
+/* Estilo geral do footer */
+footer {
+    background-color: #050a30;
+        color: rgb(255, 255, 255);
+        padding: 40px 20px;
+        font-family: sans-serif;
+        margin: 0 auto;
+}
+
+/* Contêiner principal do footer */
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* Espaçamento entre as seções */
+    flex-wrap: wrap; /* Permite que as seções quebrem linha em telas menores */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilo para cada seção */
+.footer-section {
+    flex-basis: 23%; /* Cada seção ocupa 23% da largura disponível */
+    margin-bottom: 20px; /* Espaçamento inferior entre seções */
+}
+
+/* Título das seções */
+.footer-section h4 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+/* Estilo de texto e listas */
+.footer-section p,
+.footer-section ul {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    font-size: 14px;
+    text-align: justify;
+}
+
+/* Estilo para links */
+.footer-section ul {
+    list-style: none; /* Remove os marcadores da lista */
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: rgb(255, 254, 254);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #ffffff; /* Cor ao passar o mouse */
+}
+
+/* Links das redes sociais */
+.social-links a {
+    display: inline-block;
+    margin-right: 10px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #ffffff; /* Cor ao passar o mouse */
+}
+.slider{
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    position:relative;
+    
+    }
+    .slides{
+        display: flex;
+        width: 100%;
+        animation: slideAnimation 12s infinite;
+    }
+    .slide{
+        width: 100%;
+        flex-shrink: 0;
+    }
+    @keyframes slideAnimation {
+        0%{transform: translateX(0);}
+        33%{transform: translateX(-100%);}
+        66%{transform: translateX(-200%);}
+        100%{transform: translateX(0);}
+    }
+    .slide img{
+        width: 100%;
+        display: block;
+    }
+    body {
+        font-family:  sans-serif;
+    }
+    .texto{
+        color: black;
+        font-family:  sans-serif;
+        text-decoration: none;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        scale: 200px;
+    }
+
+/* Rodapé inferior */
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px 0;
+    border-top: 1px solid #444;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    /* Alinha as seções verticalmente em telas menores */
+    .footer-container {
+        flex-direction: column;
+        align-items: center; /* Centraliza as seções */
+    }
+
+    .footer-section {
+        flex-basis: 100%; /* Cada seção ocupa toda a largura */
+        text-align: center; /* Texto centralizado */
+    }
+
+    .footer-section h4 {
+        font-size: 16px; /* Reduz tamanho da fonte */
+    }
+
+    .footer-section p,
+    .footer-section ul {
+        font-size: 14px; /* Reduz tamanho do texto */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Ajuste adicional para telas muito pequenas */
+    .footer-section h4 {
+        font-size: 14px;
+    }
+
+    .footer-section p,
+    .footer-section ul {
+        font-size: 12px;
+    }
+
+    .footer-bottom {
+        font-size: 12px;
+    }
+}
+
+/* .card:hover img{ 
+    transform: scale(1.1);
+}
+    */
+
+    .card:hover{
+        transform: scale(1.1);
+    }
+    
+    .card img{
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 8px;
+        transition: transform 0.3s ease;
+    }
+    
+    @media (max-width: 1024px) { 
+        .slider { 
+                  flex-direction: row; 
+                  flex-wrap: wrap;
+                  width: 100%;
+    } 
+    
+         .slides { 
+                   width: 100%; /* Aumenta o tamanho da box para se ajustar melhor */ 
+    }
+    } 
+    
+    
+    /* Estilos para telas menores (tablets e smartphones) */ 
+    @media (max-width: 768px) {
+          .container { 
+                    flex-direction: column; 
+                    padding: 10px; 
+    } 
+        .box { 
+                   width: 100%; /* O box ocupa toda a largura */
+    margin: 5px 0; 
+    width: 100%;
+    } 
+    }
